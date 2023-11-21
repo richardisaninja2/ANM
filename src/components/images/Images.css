@@ -1,0 +1,22 @@
+section {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .scroll-box {
+    width: 33vw;
+    height: 100vh;
+    overflow-y: scroll;
+    border: 1px solid #d99;
+  }
+  
+  .scroll-box h2 { margin-top: 50px; }
+
+
+  .portraits{
+    object-fit: contain;
+  }
+  .portraits img{
+    width: 100%;
+    padding-bottom: 3%;
+  }
