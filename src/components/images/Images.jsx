@@ -1,11 +1,37 @@
 import React, { useEffect, useState } from "react";
 import './Images.css';
 import ImageImports from "../imageImports/ImageImports";
+import Header from "../header/Header";
 
-export default function Images(){
+
+
+export default function Images(props){
+    
     const [linkArray, setLinkArr] = useState([]);
+    const[images, setImages] = useState([]);
+    let folder = props.images
+
+    let imgArray = [];
+    (function getImages(){
+        for(let i = 1; i<22; i++){
+            //pushes image link from folder
+            imgArray.push("/andresImages/"+folder+'/'+i+".jpg");
+        }
+        // console.log(imgArray)
+        
+    })()
+
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+      }
+    
 
     useEffect(() => {
+        // if(imgArray.length > 1){
+        //     setLinkArr(imgArray)
+        // }
+        setLinkArr(imgArray)
         let div1 = document.getElementById("div1");
         let div2 = document.getElementById("div2");
         let div3 = document.getElementById("div3");
@@ -31,35 +57,36 @@ export default function Images(){
       multiElementScroll( div1, div2, div3 )
 
       console.log(linkArray)
-    },[linkArray])
+    },[])
     
-    if(linkArray){
+    if(linkArray && props.images){
         return(
 
             <div>
-                <ImageImports setLinkArr={setLinkArr}/>
+                <Header/>
+                {/* <ImageImports setLinkArr={setLinkArr}/> */}
                 <section>
                     <div className="scroll-box" id="div1"> 
-                    {linkArray.slice(0,5).map((i, key) => (
+                    {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img src={window.location.origin + linkArray[key]}/>
+                            <img onClick={() => openInNewTab(window.location.origin + linkArray[key])} src={window.location.origin + linkArray[key]}/>
                         </div>
                     ))}
 
                     </div>
     
                     <div className="scroll-box" id="div2"> 
-                    {linkArray.slice(0,5).map((i, key) => (
+                    {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img src={window.location.origin + linkArray[key+5]}/>
+                            <img onClick={() => openInNewTab(window.location.origin + linkArray[key+7])} src={window.location.origin + linkArray[key+7]}/>
                         </div>
                     ))}
                     </div>
 
                     <div className="scroll-box" id="div3"> 
-                    {linkArray.slice(0,5).map((i, key) => (
+                    {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img src={window.location.origin + linkArray[key+10]}/>
+                            <img onClick={() => openInNewTab(window.location.origin + linkArray[key+14])} src={window.location.origin + linkArray[key+14]}/>
                         </div>
                     ))}
                     </div>
@@ -67,7 +94,44 @@ export default function Images(){
     
             </div>
         )     
-    }else{
+    }
+    if(!props.images){
+        return(
+
+            <div>
+                <Header/>
+                <ImageImports setLinkArr={setImages}/>
+                <section>
+                    <div className="scroll-box" id="div1"> 
+                    {imgArray.slice(0,7).map((i, key) => (
+                        <div key={key} className="portraits">
+                            <img onClick={() => openInNewTab(window.location.origin + images[key])} src={window.location.origin + images[key]}/>
+                        </div>
+                    ))}
+
+                    </div>
+    
+                    <div className="scroll-box" id="div2"> 
+                    {imgArray.slice(0,7).map((i, key) => (
+                        <div key={key} className="portraits">
+                            <img onClick={() => openInNewTab(window.location.origin + images[key+7])} src={window.location.origin + images[key+7]}/>
+                        </div>
+                    ))}
+                    </div>
+
+                    <div className="scroll-box" id="div3"> 
+                    {imgArray.slice(0,7).map((i, key) => (
+                        <div key={key} className="portraits">
+                            <img onClick={() => openInNewTab(window.location.origin + images[key+14])} src={window.location.origin + images[key+14]}/>
+                        </div>
+                    ))}
+                    </div>
+                </section>
+    
+            </div>
+        )     
+    }
+    else{
         return(<p>..loading</p>)
     }
     

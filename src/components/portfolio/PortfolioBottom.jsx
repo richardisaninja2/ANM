@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PortfolioOptions from "./PortfolioOptions";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 export default function PortfolioBottom(){
     //array of images of 3
@@ -27,18 +29,33 @@ export default function PortfolioBottom(){
     return(
         <div className="portBottom">
             <div className="bottomCont">
+                {/* <div className="chevron">
+                    <h1 onClick={bonClick}><FaChevronLeft color="#fc9600"/></h1>
+                </div> */}
                 <div>
                     {console.log(folder)}
-                    <img src={window.location.origin + '/andresImages/'+folder+'/1.jpg'}/>
+                    <NavLink to={'/images/'+folder}>
+                        <img src={window.location.origin + '/andresImages/'+folder+'/1.jpg'}/>
+                    </NavLink>
                 </div>
                 <div>
-                    <img src={window.location.origin + '/andresImages/'+folder+'/2.jpg'}/>
+                    <NavLink to={'/images/'+folder}>
+                        <img src={window.location.origin + '/andresImages/'+folder+'/2.jpg'}/>
+                    </NavLink>
                 </div>
                 <div>
-                    <img src={window.location.origin + '/andresImages/'+folder+'/3.jpg'}/> 
+                    <NavLink to={'/images/'+folder}>
+                        <img src={window.location.origin + '/andresImages/'+folder+'/3.jpg'}/> 
+                    </NavLink>
                 </div>
-                <div>
-                    <h1 onClick={bonClick}>"h"</h1>
+                {/* <div className="chevron">
+                    <h1 onClick={bonClick}><FaChevronRight color="#fc9600"/></h1>
+                </div> */}
+            </div>
+            <div className="chevrons">
+                <div className="chevron">
+                    <h1 onClick={bonClick}><FaChevronLeft color="#fc9600"/></h1>
+                    <h1 onClick={bonClick}><FaChevronRight color="#fc9600"/></h1>
                 </div>
             </div>
             <div className="endingQuote">

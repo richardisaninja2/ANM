@@ -16,6 +16,9 @@ section {
   .portraits{
     object-fit: contain;
   }
+  .portraits:hover{
+    cursor: pointer;
+  }
   .portraits img{
     width: 100%;
     padding-bottom: 3%;
