@@ -1,0 +1,110 @@
+.portfolio{
+    background: #151211;
+
+    color: white;
+}
+.hr{
+    border: 1px solid white;;
+}
+.hr h1{
+    margin-top: 0;
+    padding-top: 1%;
+}
+.preview{
+    display: flex;
+}
+.preview img{
+    height: 80vh;
+    
+}
+/* left text section */
+.leftSect{
+    width: 50vw;
+    font-size: 2.2em;
+    font-style:normal;
+    border-bottom: 1px solid white;
+    
+}
+/* make seecong p tag small on text section */
+.leftSect p:nth-of-type(2){
+    font-size: .7em;
+}
+.rightSect{
+    width: 50vw;
+    height: 80vh;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.text{
+    padding-top: 20vh;;
+    padding-left: 10vw;
+}
+.text p{
+    text-align: left;
+}
+.removeMargin{
+    margin-top: 2vh;
+    height: 5vh;
+    margin-left: 0;
+    float: left;
+}
+.buttonEnding:hover:after {
+    content: "\21AC";
+}
+
+/* Port Bottom Section */
+.portBottom{
+    padding-top: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-bottom: 10vh;
+}
+.bottomCont img{
+    width: 70%;
+
+}
+.bottomCont{
+    display: flex;
+}
+.bottomCont div:nth-of-type(1){
+    width: 60%;
+    margin-top: 27%;
+}
+.bottomCont div:nth-of-type(3){
+    width: 60%;
+}
+.endingQuote{
+    text-align: center;
+    margin-top: 10vh;
+    font-size: .8em;
+}
+
+/* optOptions section */
+.portOptionsCont{
+    margin-top: 12vh;
+}
+.optLabel{
+    width: 69.5%;
+    margin-left: 15%;
+    margin-top: 4vh;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 5vh;
+    border-radius: 2px;
+    height: 5vh;
+}
+.optLabel:hover{
+    background: white;
+    color: black;
+
+}
+.options{
+    display: flex;
+
+}
+.optImg{
+    width: 70%;
+}
+.optImg:nth-of-type(2){
+    
+}
