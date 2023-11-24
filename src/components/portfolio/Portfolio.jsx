@@ -12,7 +12,7 @@ export default function Portfolio(){
             <div className="preview"> 
                 <section className="leftSect">
                     <div className="text">
-                        <p>QUALITY NEVER GOES OUT OF STYLE</p>
+                        <p>QUALITY NEVER GOES OUT OF <span>STYLE</span></p>
                         <p>TAKE YOUR PERFECT PICTURE</p>
                         <NavLink to={'/images'}>
                             <button className="portButton removeMargin buttonEnding orange">Explore Portfolio </button>

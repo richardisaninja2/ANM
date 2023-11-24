@@ -42,6 +42,11 @@
     padding-top: 20vh;;
     padding-left: 10vw;
 }
+.text span{
+    color: #fc9600;
+    font-style: italic;
+    
+}
 .text p{
     text-align: left;
 }
@@ -109,6 +114,7 @@
     margin-top: 4vh;
     border: 1px solid white;
     text-align: center;
+    color: white;
     line-height: 5vh;
     border-radius: 2px;
     height: 5vh;
@@ -133,4 +139,10 @@
 }
 .optImg{
     width: 70%;
+}
+.whiteBg{
+    border-color: black;
+}
+.margin-bottom{
+    padding-bottom: 5%;
 }

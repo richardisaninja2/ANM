@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './Images.css';
 import ImageImports from "../imageImports/ImageImports";
 import Header from "../header/Header";
+import PortfolioOptions from "../portfolio/PortfolioOptions";
 
 
 
@@ -28,6 +29,10 @@ export default function Images(props){
     
 
     useEffect(() => {
+        // Scroll to the top of this page when mounted
+
+        window.scrollTo(0, 0);
+
         // if(imgArray.length > 1){
         //     setLinkArr(imgArray)
         // }
@@ -62,7 +67,7 @@ export default function Images(props){
     if(linkArray && props.images){
         return(
 
-            <div>
+            <div className="imagesCont">
                 <Header/>
                 {/* <ImageImports setLinkArr={setLinkArr}/> */}
                 <section>
@@ -91,13 +96,15 @@ export default function Images(props){
                     ))}
                     </div>
                 </section>
-    
+                <div>
+                  <PortfolioOptions/>  
+                </div>
+                
             </div>
         )     
     }
     if(!props.images){
         return(
-
             <div>
                 <Header/>
                 <ImageImports setLinkArr={setImages}/>
@@ -127,7 +134,10 @@ export default function Images(props){
                     ))}
                     </div>
                 </section>
-    
+                <div>
+                    <PortfolioOptions/>   
+                </div>
+                
             </div>
         )     
     }

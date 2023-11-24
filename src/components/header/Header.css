@@ -1,0 +1,32 @@
+.hr{
+    display: flex;
+    border: 1px solid white;
+    height: 10vh;
+    justify-content: center
+}
+.orange{
+    color: #fc9600;
+}
+.hr h1{
+
+
+    text-align: center;
+    line-height: 10vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.hr h1:hover{
+    color: white;
+}
+.hr h2{
+    color: white;
+    text-align: center;
+    line-height: 6vh;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.hr h2:hover{
+    font-style: normal;
+    color: #fc9600;
+}

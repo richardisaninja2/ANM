@@ -30,7 +30,7 @@ export default function Main(){
             </div>
             <div className="beside">
                 <div className="">
-                    <img className="img" src={window.location.origin + '/andresImages/2.jpg'}/>
+                    <img className="img" src={window.location.origin + '/andresImages/4.jpg'}/>
                 </div>
             </div>
         </div>

@@ -1,3 +1,6 @@
+.imagesCont{
+  background: #151211
+}
 section {
     display: flex;
     justify-content: flex-start;

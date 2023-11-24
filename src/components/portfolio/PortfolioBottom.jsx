@@ -11,9 +11,21 @@ export default function PortfolioBottom(){
     const [counter, setCounter] = useState(0);
 
     //choose which folder to display from
+    function prev(){
+        let which = ["homecoming", "graduation", "seniorPic"]
+        setCounter(count => count - 1);
+        if(counter >= 0 ){
+           setFolder(which[counter]) 
+            console.log(which[counter])
+            console.log(counter)
+        }else{
+            setCounter(which.length - 1);
+            setFolder("graduation") 
+            
+        }  
+    }
     function bonClick(){
         let which = ["homecoming", "graduation", "seniorPic"]
-        
         setCounter(count => count + 1);
         if(counter < which.length){
            setFolder(which[counter]) 
@@ -54,7 +66,7 @@ export default function PortfolioBottom(){
             </div>
             <div className="chevrons">
                 <div className="chevron">
-                    <h1 onClick={bonClick}><FaChevronLeft color="#fc9600"/></h1>
+                    <h1 onClick={prev}><FaChevronLeft color="#fc9600"/></h1>
                     <h1 onClick={bonClick}><FaChevronRight color="#fc9600"/></h1>
                 </div>
             </div>
