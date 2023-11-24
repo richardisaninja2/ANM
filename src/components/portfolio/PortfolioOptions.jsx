@@ -25,7 +25,7 @@ export default function PortfolioOptions(){
                 </div>
                 <div onClick={() => openInNewTab('#/images/wedding')}>
                 
-                    <img className="optImg" src={window.location.origin + '/andresImages/3.jpg'}/>
+                    <img className="optImg" src={window.location.origin + '/andresImages/wedding/3.jpg'}/>
                     <div className="optLabel orange ">Wedding </div>
                 
                 </div>

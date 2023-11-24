@@ -3,6 +3,7 @@ import './Images.css';
 import ImageImports from "../imageImports/ImageImports";
 import Header from "../header/Header";
 import PortfolioOptions from "../portfolio/PortfolioOptions";
+import Footer from "../footer/Footer";
 
 
 
@@ -99,13 +100,13 @@ export default function Images(props){
                 <div>
                   <PortfolioOptions/>  
                 </div>
-                
+                <Footer/>
             </div>
         )     
     }
     if(!props.images){
         return(
-            <div>
+            <div className="imagesCont">
                 <Header/>
                 <ImageImports setLinkArr={setImages}/>
                 <section>
@@ -129,7 +130,7 @@ export default function Images(props){
                     <div className="scroll-box" id="div3"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + images[key+14])} src={window.location.origin + images[key+14]}/>
+                            <img onClick={() => openInNewTab(window.location.origin + images[key+14])} src={window.location.origin + images[key+12]}/>
                         </div>
                     ))}
                     </div>
@@ -137,7 +138,7 @@ export default function Images(props){
                 <div>
                     <PortfolioOptions/>   
                 </div>
-                
+                <Footer/>
             </div>
         )     
     }

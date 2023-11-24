@@ -3,6 +3,7 @@ import "../portfolio/Portfolio.css"
 import PortfolioBottom from "./PortfolioBottom";
 import { NavLink } from "react-router-dom";
 import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 export default function Portfolio(){
 
@@ -29,6 +30,7 @@ export default function Portfolio(){
             <div>
                 <PortfolioBottom/>
             </div>
+            <Footer/>
         </div>
     )
 }

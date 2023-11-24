@@ -4,6 +4,7 @@ import Socials from "../socials/Socials";
 import { NavLink } from "react-router-dom";
 import Portfolio from "../portfolio/Portfolio";
 import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 
 
@@ -34,6 +35,7 @@ export default function Main(){
                 </div>
             </div>
         </div>
+        <Footer/>
         </div>
     )
 }
