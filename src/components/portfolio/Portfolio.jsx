@@ -23,7 +23,7 @@ export default function Portfolio(){
                 </section>
                 <section className="rightSect">
                     
-                        <img src={window.location.origin + '/andresImages/7.jpg'}/>
+                        <img src={ require('../../andresImages/7.jpg')}/>
                     
                 </section>
             </div>

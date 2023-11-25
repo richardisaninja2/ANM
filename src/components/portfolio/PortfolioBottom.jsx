@@ -47,17 +47,17 @@ export default function PortfolioBottom(){
                 <div>
                     {console.log(folder)}
                     <NavLink to={'/images/'+folder}>
-                        <img src={window.location.origin + '/andresImages/'+folder+'/1.jpg'}/>
+                        <img src={ require('../../andresImages/'+folder+'/1.jpg')}/>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to={'/images/'+folder}>
-                        <img src={window.location.origin + '/andresImages/'+folder+'/2.jpg'}/>
+                        <img src={require('../../andresImages/'+folder+'/2.jpg')}/>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to={'/images/'+folder}>
-                        <img src={window.location.origin + '/andresImages/'+folder+'/3.jpg'}/> 
+                        <img src={require('../../andresImages/'+folder+'/3.jpg')}/> 
                     </NavLink>
                 </div>
                 {/* <div className="chevron">

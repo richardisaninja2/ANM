@@ -17,7 +17,7 @@ export default function Images(props){
     (function getImages(){
         for(let i = 1; i<22; i++){
             //pushes image link from folder
-            imgArray.push("/andresImages/"+folder+'/'+i+".jpg");
+            imgArray.push(require("../../andresImages/"+folder+'/'+i+".jpg"));
         }
         // console.log(imgArray)
         
@@ -75,7 +75,8 @@ export default function Images(props){
                     <div className="scroll-box" id="div1"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + linkArray[key])} src={window.location.origin + linkArray[key]}/>
+                             
+                            <img onClick={() => openInNewTab(linkArray[key])}  src={linkArray[key]}/>
                         </div>
                     ))}
 
