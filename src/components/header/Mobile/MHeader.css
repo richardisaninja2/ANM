@@ -1,0 +1,14 @@
+.mHeaderCont{
+    text-align: left;
+    margin-left: 5%;
+    padding-bottom: 5%;
+}
+.mHeaderCont h1{
+    color: var(--orange);
+    margin-bottom: 0;
+}
+.mHeaderCont h1:nth-of-type(2){
+    color: gray;;
+    margin-top: 0;
+    padding-top: 0;
+}

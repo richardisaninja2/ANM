@@ -17,7 +17,12 @@ export default function Images(props){
     (function getImages(){
         for(let i = 1; i<22; i++){
             //pushes image link from folder
-            imgArray.push(require("../../andresImages/"+folder+'/'+i+".jpg"));
+            if(props.images){
+                imgArray.push(require("../../andresImages/"+folder+'/'+i+".jpg"));
+            }else{
+                imgArray.push(require("../../andresImages/"+'/'+i+".jpg"));
+            }
+            
         }
         // console.log(imgArray)
         
@@ -64,7 +69,7 @@ export default function Images(props){
 
       console.log(linkArray)
     },[])
-    
+    //if category is selected
     if(linkArray && props.images){
         return(
 
@@ -85,7 +90,7 @@ export default function Images(props){
                     <div className="scroll-box" id="div2"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + linkArray[key+7])} src={window.location.origin + linkArray[key+7]}/>
+                            <img onClick={() => openInNewTab(linkArray[key+7])} src={linkArray[key+7]}/>
                         </div>
                     ))}
                     </div>
@@ -93,7 +98,7 @@ export default function Images(props){
                     <div className="scroll-box" id="div3"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + linkArray[key+14])} src={window.location.origin + linkArray[key+14]}/>
+                            <img onClick={() => openInNewTab(linkArray[key+14])} src={linkArray[key+14]}/>
                         </div>
                     ))}
                     </div>
@@ -105,6 +110,7 @@ export default function Images(props){
             </div>
         )     
     }
+    //desktop.. if category not selected
     if(!props.images){
         return(
             <div className="imagesCont">
@@ -114,7 +120,7 @@ export default function Images(props){
                     <div className="scroll-box" id="div1"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + images[key])} src={window.location.origin + images[key]}/>
+                            <img onClick={() => openInNewTab(imgArray[key])} src={imgArray[key]}/>
                         </div>
                     ))}
 
@@ -123,7 +129,7 @@ export default function Images(props){
                     <div className="scroll-box" id="div2"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + images[key+7])} src={window.location.origin + images[key+7]}/>
+                            <img onClick={() => openInNewTab(imgArray[key+7])} src={imgArray[key+7]}/>
                         </div>
                     ))}
                     </div>
@@ -131,7 +137,7 @@ export default function Images(props){
                     <div className="scroll-box" id="div3"> 
                     {imgArray.slice(0,7).map((i, key) => (
                         <div key={key} className="portraits">
-                            <img onClick={() => openInNewTab(window.location.origin + images[key+14])} src={window.location.origin + images[key+12]}/>
+                            <img onClick={() => openInNewTab(imgArray[key+12])} src={imgArray[key+12]}/>
                         </div>
                     ))}
                     </div>

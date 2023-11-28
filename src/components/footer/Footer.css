@@ -22,3 +22,11 @@
 .footerCont h2:hover:after{
     content: "⮸";
 }
+@media only screen and (max-width: 500px){
+    .footerCont h2:after{
+        content: ""
+    }
+    .footerCont h2:hover:after{
+        content: "";
+    }
+}

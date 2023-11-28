@@ -164,3 +164,24 @@
         font-size: .8em;
     }
 }
+
+@media only screen and (max-width: 500px){
+    .removeMargin{
+        margin-top: 0vh;
+        width: 30vw;
+    }
+    .portOptionsCont{
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+    .optLabel{
+        width: inherit;
+        margin-right: 5%;
+        margin-left: 9%;
+    }
+    .text {
+        padding-top: 7vh;
+        padding-left: 10vw;
+    }
+
+}
