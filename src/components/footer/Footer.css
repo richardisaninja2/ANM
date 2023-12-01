@@ -2,25 +2,56 @@
     display: flex;
     border: 1px solid #fc9600;
     height: 90%;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 18%;
     background: #fc9600;
     color: #151211;
 }
 .footerCont li, a{
     color: #151211; 
+    
+}
+.footerCont a{
+    margin-right: 5%;
+
+}
+.footerCont span:after{
+    content: "\2197";
+    display: inline-block;
+}
+.footerCont span{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.footerCont a{
+    margin-right: 5%;
 }
 .footerCont h1{
-    margin-left: 2vw;
     margin-right: 2vw;
 }
 .footerCont h1:hover{
     text-decoration: underline;
 }
+.footerCont h2{
+    
+}
 .footerCont h2:after{
-    content: "⮵"
+    
+    border: 1px solid black;
+    border-radius: 5px;
+    
 }
 .footerCont h2:hover:after{
-    content: "⮸";
+    
+}
+.anmBig{
+    text-align: left;
+    
+}
+.anmBig{
+    margin-top: 0;
+    font-size: 4em;
+    font-weight: normal;
 }
 @media only screen and (max-width: 500px){
     .footerCont h2:after{
