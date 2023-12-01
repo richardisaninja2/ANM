@@ -53,11 +53,23 @@
     font-size: 4em;
     font-weight: normal;
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     .footerCont h2:after{
-        content: ""
+        content: none;
     }
-    .footerCont h2:hover:after{
-        content: "";
+    .footerCont{
+        padding-left: 5%;
+    }
+    .footerCont span:after{
+        content: none;
+        border: 0px;;
+    }
+    .footerCont span{
+        border: 0px;;
+    }
+    .anmBig{
+        margin-top: 0;
+        font-size: 3em;
+        font-weight: normal;
     }
 }
