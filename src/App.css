@@ -10,5 +10,7 @@ li, a {
 }
 :root{
   --orange: #fc9600;
+  --fontSec: #fc9600;
+  --bg: black;
 }
 

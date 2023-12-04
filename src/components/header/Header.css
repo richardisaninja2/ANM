@@ -5,7 +5,7 @@
     justify-content: center
 }
 .orange{
-    color: #fc9600;
+    color: var(--fontSec);
 }
 
 .hr h1{
@@ -28,7 +28,7 @@
 
 .hr h2:hover{
     font-style: normal;
-    color: #fc9600;
+    color: var(--fontSec);
 }
 /* //media quesry for smaller laptop screens */
 @media only screen and (min-width: 1100px) and (max-width: 1600px){

@@ -1,10 +1,10 @@
 .footerCont{
     display: flex;
-    border: 1px solid #fc9600;
+    border: 1px solid var(--fontSec);
     height: 90%;
     justify-content: flex-start;
     padding-left: 18%;
-    background: #fc9600;
+    background: var(--fontSec);
     color: #151211;
 }
 .footerCont li, a{

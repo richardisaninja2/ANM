@@ -40,7 +40,7 @@ body {
 }
 .buttonArrow:hover:after {
     content: "\21AC";
-    color: #fc9600;
+    color: var(--fontSec);
     
 }
 .mainImg{

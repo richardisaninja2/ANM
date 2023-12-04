@@ -7,7 +7,7 @@
     border: 1px solid white;
 }
 .orange{
-    color: #fc9600;
+    color: var(--fontSec);
 }
 .hr h1{
     margin-top: 0;
@@ -43,7 +43,7 @@
     padding-left: 10vw;
 }
 .text span{
-    color: #fc9600;
+    color: var(--fontSec);
     font-style: italic;
     
 }
@@ -61,7 +61,7 @@
 }
 .buttonEnding:hover:after {
     content: "\21AC";
-    color: #fc9600;
+    color: var(--fontSec);
     
 }
 
@@ -127,7 +127,7 @@
 }
 .optLabel:hover:after {
     content: "\21AC";
-    color: #fc9600;
+    color: var(--fontSec);
     
 }r{
     background: white;
